@@ -1,5 +1,5 @@
 name:                byte-count-reader
-version:             0.1.0.0
+version:             0.9.0.0
 github:              "danielrolls/byte-count-reader"
 license:             GPL-3.0-only
 author:              "Daniel Rolls"
