@@ -6,6 +6,9 @@ import Data.Either.Extra (eitherToMaybe)
 import Text.Parsec.Number (floating3)
 import GHC.Float.RealFracMethods (roundDoubleInteger)
 
+-- |Read strings describing a number of bytes like 2KB and 0.5 MiB.
+-- The units KB, MB, GB and TB are assumed to be base 10 (e.g. 2KB = 2 x 1000).
+-- The units KiB, MiB, GiB and TiB are assumed to be base 2 (e.g. 2KiB = 2 * 1024).
 getSize :: String -> Maybe Integer
 getSize inStr = do (number, units) <- eitherToMaybe $ parse bytesParser "<>" inStr
                    roundDoubleInteger . (number *) . fromInteger <$> toMultiplier units
