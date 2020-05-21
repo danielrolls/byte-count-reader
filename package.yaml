@@ -1,0 +1,41 @@
+name:                byte-count-reader
+version:             0.1.0.0
+github:              "danielrolls/byte-count-reader"
+license:             GPL-3.0-only
+author:              "Daniel Rolls"
+maintainer:          "daniel.rolls.27@googlemail.com"
+copyright:           "2020 Daniel Rolls"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            Read strings describing a number of bytes like 2Kb and 0.5 MiB
+category:            Text
+
+description:         Please see the README on GitHub at <https://github.com/danielrolls/byte-count-reader#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- extra
+- parsec
+- parsec3-numbers
+- text
+
+library:
+  source-dirs: src
+
+tests:
+  haskelltest-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - byte-count-reader
+    - hspec
+
+default-extensions:
+  - OverloadedStrings
