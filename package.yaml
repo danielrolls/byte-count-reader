@@ -24,6 +24,7 @@ dependencies:
 
 library:
   source-dirs: src
+  generated-exposed-modules: Paths_byte_count_reader
 
 tests:
   haskelltest-test:
@@ -39,3 +40,4 @@ tests:
 
 default-extensions:
   - OverloadedStrings
+
