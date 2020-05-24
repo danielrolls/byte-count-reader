@@ -5,7 +5,7 @@ import Data.ByteCountReader
 main :: IO ()
 main = hspec $ 
      do it "Unparsable strings should return Nothing" $
-           getSize "unparseable" `shouldBe` Nothing
+             sizeInBytes "unparseable" `shouldBe` Nothing
         testHappyPathScenarios
           [ ("1 kb", 1000)
           , ("0.5 kib", 512)
@@ -18,6 +18,7 @@ main = hspec $
           ]
         where testHappyPathScenarios = foldl (>>) (return ()) . map parseTest
               parseTest (string, expectedValue) = it ("Parse " <> string) $
-                                                     getSize string `shouldBe` Just expectedValue
+                                                     sizeInBytes string `shouldBe` Just expectedValue
+
 
 
