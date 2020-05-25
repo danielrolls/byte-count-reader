@@ -1,4 +1,8 @@
 # Byte Count Reader
+-------------------
+
+[![Hackage](https://img.shields.io/hackage/v/byte-count-reader.svg)][hackage]
+
 This library is for reading strings describing a number of bytes like 2Kb and 0.5 MiB.
 
 The units KB, MB, GB and TB imply base 10 (e.g. 2KB = 2 x 1000).
