@@ -1,6 +1,6 @@
 cabal-version: 2.2
 name: byte-count-reader
-version: 0.9.0.0
+version: 0.10.0.0
 license: GPL-3.0-only
 license-file: LICENSE
 copyright: 2020 Daniel Rolls
