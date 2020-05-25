@@ -11,16 +11,17 @@ The units KB, MB, GB and TB imply base 10 (e.g. 2KB = 2 x 1000). The units KiB, 
 module Data.ByteCountReader (sizeInBytes) where
 
 import Data.Char (toLower)
-import Text.ParserCombinators.Parsec (GenParser, many, many1, oneOf, char, parse, anyChar)
 import Data.Either.Extra (eitherToMaybe)
-import Text.Parsec.Number (floating3)
+import Data.Text (Text(), unpack)
 import GHC.Float.RealFracMethods (roundDoubleInteger)
+import Text.ParserCombinators.Parsec.Number (floating3)
+import Text.ParserCombinators.Parsec (GenParser, many, many1, oneOf, char, parse, anyChar)
 
 -- |Read strings describing a number of bytes like 2KB and 0.5 MiB.
 -- The units KB, MB, GB and TB are assumed to be base 10 (e.g. 2KB = 2 x 1000).
 -- The units KiB, MiB, GiB and TiB are assumed to be base 2 (e.g. 2KiB = 2 * 1024).
-sizeInBytes :: String -> Maybe Integer
-sizeInBytes inStr = do (number, units) <- eitherToMaybe $ parse bytesParser "<>" inStr
+sizeInBytes :: Text -> Maybe Integer
+sizeInBytes inStr = do (number, units) <- eitherToMaybe $ parse bytesParser "<>" (unpack inStr)
                        roundDoubleInteger . (number *) . fromInteger <$> toMultiplier units
 
 bytesParser :: GenParser Char st (Double, String)

@@ -19,7 +19,7 @@ dependencies:
 - base >= 4.7 && < 5
 - extra
 - parsec
-- parsec3-numbers
+- parsec-numbers
 - text
 
 library:

@@ -1,6 +1,7 @@
 import Test.Hspec
 
 import Data.ByteCountReader
+import Data.Text (unpack)
 
 main :: IO ()
 main = hspec $ 
@@ -17,7 +18,7 @@ main = hspec $
           , ("1      tIb", 1099511627776)
           ]
         where testHappyPathScenarios = foldl (>>) (return ()) . map parseTest
-              parseTest (string, expectedValue) = it ("Parse " <> string) $
+              parseTest (string, expectedValue) = it ("Parse " <> unpack string) $
                                                      sizeInBytes string `shouldBe` Just expectedValue
 
 
