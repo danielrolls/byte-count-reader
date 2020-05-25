@@ -1,6 +1,7 @@
 # Byte Count Reader
 -------------------
 
+[![Build Status](https://travis-ci.org/danielrolls/byte-count-reader.svg?branch=master)](https://travis-ci.org/danielrolls/byte-count-reader)
 [![Hackage](https://img.shields.io/hackage/v/byte-count-reader.svg)][hackage]
 
 This library is for reading strings describing a number of bytes like 2Kb and 0.5 MiB.
