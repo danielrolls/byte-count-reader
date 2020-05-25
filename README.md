@@ -16,4 +16,4 @@ The following are examples of strings that are accepted:
 - 10 &nbsp;&nbsp; gib
 - 100tb
 
-[hackage]: http://hackage.haskell.org/package/github "Hackage"
+[hackage]: http://hackage.haskell.org/package/byte-count-reader "Hackage"
