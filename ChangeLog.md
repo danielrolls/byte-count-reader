@@ -1,6 +1,8 @@
 # Changelog for byte-count-reader
 
 ## Unreleased changes
+- Relaxed upper bound on extra <1.7 -> <1.8
+- Fixed incorrect link in README
 
 ## 0.10
 - bytesParser now accepts Text not [Char] datatypes
