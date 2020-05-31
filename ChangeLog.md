@@ -1,6 +1,8 @@
 # Changelog for byte-count-reader
 
 ## Unreleased changes
+
+## 0.10.0.1
 - Relaxed upper bound on extra <1.7 -> <1.8
 - Fixed incorrect link in README
 
