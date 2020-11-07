@@ -25,6 +25,7 @@ main = hspec $
           , ("3 kb", 3072)
           , (".5 MiB", 524288)
           , ("4 GiB", 4294967296)
+          , ("2 TiB", 2199023255552)
           ]
         where testHappyPathScenarios functionUnderTest = foldl (>>) (return ()) . map (parseTest functionUnderTest)
               parseTest functionUnderTest (string, expectedValue) = it ("Parse " <> unpack string) $
