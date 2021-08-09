@@ -1,7 +1,7 @@
 {-|
 Module      : Byte Count Reader
 Description : Read strings like "2kb" and "12 MiB" as counts of bytes
-Copyright   : (c) Daniel Rolls, 2020
+Copyright   : (c) Daniel Rolls, 2021
 License     : GPL-3
 Maintainer  : daniel.rolls.27@googlemail.com
 
