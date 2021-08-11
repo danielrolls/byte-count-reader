@@ -16,6 +16,7 @@ build-type: Simple
 extra-source-files:
     README.md
     ChangeLog.md
+tested-with: GHC == 8.10.4
 
 source-repository head
     type: git
