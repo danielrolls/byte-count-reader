@@ -1,4 +1,4 @@
-cabal-version: 3.0
+cabal-version: 2.2
 name: byte-count-reader
 version: 0.10.1.4
 license: GPL-3.0-only
@@ -16,6 +16,7 @@ build-type: Simple
 extra-source-files:
     README.md
     ChangeLog.md
+tested-with: GHC == 8.10.4
 
 source-repository head
     type: git
