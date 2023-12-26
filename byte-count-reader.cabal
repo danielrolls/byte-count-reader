@@ -1,6 +1,6 @@
 cabal-version: 2.2
 name: byte-count-reader
-version: 0.10.1.10
+version: 0.10.1.11
 license: GPL-3.0-only
 license-file: LICENSE
 copyright: 2021 Daniel Rolls
@@ -36,7 +36,7 @@ library
         extra >=1.6.21 && <1.8,
         parsec >=3.1.14.0 && <3.2,
         parsec-numbers >=0.1.0 && <0.2,
-        text >=1.2.3.2 && <2.1
+        text >=1.2.3.2 && <2.2
 
 test-suite haskelltest-test
     type: exitcode-stdio-1.0
@@ -54,4 +54,4 @@ test-suite haskelltest-test
         hspec >=2.7.1 && <2.12,
         parsec >=3.1.14.0 && <3.2,
         parsec-numbers >=0.1.0 && <0.2,
-        text >=1.2.3.2 && <2.1
+        text >=1.2.3.2 && <2.2
